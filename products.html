@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pavitra Narmadeshwar Shivling Center — पवित्र संग्रह</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Mukta:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#FBF2E3;
+    --cream-deep:#F2E3C7;
+    --card:#FFFDF8;
+    --ink:#251A0E;
+    --ink-soft:#5A4B3A;
+    --rust:#D9560F;
+    --rust-deep:#B8430A;
+    --gold:#C79A3E;
+    --gold-light:#E8D5A8;
+    --green:#22B14C;
+    --green-deep:#199640;
+    --peach-chip:#F8DEC0;
+    --shadow: 0 10px 30px -12px rgba(90,53,10,0.28);
+    --radius: 18px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:
+      radial-gradient(ellipse 900px 500px at 50% -100px, rgba(199,154,62,0.12), transparent 60%),
+      var(--cream);
+    color:var(--ink);
+    font-family:'Inter','Mukta',sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.display{font-family:'Baloo 2','Mukta',sans-serif;}
+  .hindi{font-family:'Mukta','Baloo 2',sans-serif;}
+  img{max-width:100%;display:block;}
+  a{color:inherit;}
+  button{font-family:inherit;cursor:pointer;}
+
+  /* ===== Header ===== */
+  header.site{
+    background:var(--card);
+    border-bottom:1px solid var(--gold-light);
+    position:sticky; top:0; z-index:40;
+  }
+  .header-inner{
+    max-width:1120px; margin:0 auto; padding:14px 20px;
+    display:flex; align-items:center; justify-content:space-between; gap:14px;
+  }
+  .brand{display:flex; align-items:center; gap:12px;}
+  .brand-mark{
+    width:52px;height:52px;border-radius:50%;
+    background:radial-gradient(circle at 35% 30%, #F5B168, var(--rust) 70%);
+    display:flex;align-items:center;justify-content:center;
+    box-shadow: inset 0 -3px 6px rgba(0,0,0,0.15), 0 3px 8px rgba(184,67,10,0.3);
+    flex-shrink:0;
+  }
+  .brand-mark svg{width:28px;height:28px;}
+  .brand-name{font-weight:700; font-size:1.15rem; line-height:1.15; color:var(--ink);}
+  .brand-sub{font-weight:600; font-size:0.86rem; color:var(--rust); letter-spacing:.2px;}
+  .call-btn{
+    display:flex; align-items:center; gap:8px;
+    background:linear-gradient(180deg, var(--rust), var(--rust-deep));
+    color:#fff; border:none; padding:11px 20px; border-radius:999px;
+    font-weight:600; font-size:0.92rem; box-shadow:0 6px 16px -6px rgba(184,67,10,0.55);
+    text-decoration:none; white-space:nowrap;
+  }
+  .call-btn svg{width:16px;height:16px;}
+
+  /* ===== Hero ===== */
+  .hero{
+    max-width:820px;margin:0 auto;padding:56px 22px 40px;text-align:center;position:relative;
+    isolation:isolate;
+  }
+  .hero-bg{
+    position:absolute; inset:0; z-index:-2;
+    background-image:url('https://res.cloudinary.com/tdqmhzyk/image/upload/v1786854907/copy_of_img-20260805-wa0016_1_mpvbu1.jpg');
+    background-size:cover; background-position:center 30%;
+  }
+  .hero-bg::after{
+    content:""; position:absolute; inset:0;
+    background:linear-gradient(180deg, rgba(251,242,227,0.94) 0%, rgba(251,242,227,0.90) 55%, var(--cream) 92%);
+  }
+  .om-watermark{
+    position:absolute; top:-10px; left:50%; transform:translateX(-50%);
+    font-size:220px; color:var(--gold); opacity:0.07; line-height:1;
+    font-family:'Baloo 2',sans-serif; pointer-events:none; user-select:none;
+    z-index:0;
+  }
+  .hero > *{position:relative; z-index:1;}
+  .heritage-row{
+    display:flex; gap:12px; justify-content:center; flex-wrap:wrap; margin:0 0 20px;
+  }
+  .heritage-chip{
+    display:flex; align-items:center; gap:8px;
+    background:rgba(255,253,248,0.9); border:1px solid var(--gold);
+    padding:9px 16px; border-radius:999px; font-size:0.85rem; font-weight:700; color:var(--ink);
+    box-shadow:0 4px 12px -6px rgba(90,53,10,0.25);
+  }
+  .heritage-chip svg{width:16px;height:16px; flex-shrink:0; stroke:var(--rust);}
+  .badge-pill{
+    display:inline-block; background:var(--peach-chip); color:var(--rust-deep);
+    font-weight:700; font-size:0.78rem; letter-spacing:.06em;
+    padding:8px 18px; border-radius:999px; margin-bottom:22px;
+  }
+  .hero h1{
+    font-size:2.5rem; margin:0 0 6px; font-weight:700; color:var(--ink);
+    line-height:1.25;
+  }
+  .hero .en-headline{
+    font-size:1.7rem; color:var(--rust); font-weight:700; margin:0 0 20px;
+  }
+  .hero p.lede{
+    font-size:1.05rem; color:var(--ink-soft); line-height:1.65; margin:0 auto 30px; max-width:640px;
+  }
+  .hero-ctas{display:flex; flex-direction:column; gap:14px; max-width:420px; margin:0 auto;}
+  .cta-btn{
+    display:flex; align-items:center; justify-content:center; gap:10px;
+    padding:16px 20px; border-radius:14px; border:none;
+    font-weight:700; font-size:1.02rem; text-decoration:none;
+    box-shadow:var(--shadow);
+  }
+  .cta-btn svg{width:20px;height:20px; flex-shrink:0;}
+  .cta-whatsapp{background:linear-gradient(180deg, #2FCB59, var(--green-deep)); color:#fff;}
+  .cta-call{background:linear-gradient(180deg, var(--rust), var(--rust-deep)); color:#fff;}
+
+  .trust-row{
+    display:flex; gap:12px; justify-content:center; flex-wrap:wrap; margin-top:26px;
+  }
+  .trust-chip{
+    display:flex; align-items:center; gap:7px;
+    background:var(--card); border:1px solid var(--gold-light);
+    padding:8px 16px; border-radius:999px; font-size:0.86rem; font-weight:600; color:var(--ink);
+  }
+  .trust-chip .dot{
+    width:16px;height:16px;border-radius:50%; background:var(--gold);
+    display:flex;align-items:center;justify-content:center;flex-shrink:0;
+  }
+  .trust-chip .dot svg{width:10px;height:10px; stroke:#fff;}
+
+  /* ===== Marigold divider (signature) ===== */
+  .garland{
+    display:flex; justify-content:center; align-items:center; gap:10px;
+    max-width:900px; margin:44px auto 6px; padding:0 20px;
+  }
+  .garland span{
+    width:9px;height:9px;border-radius:50%;
+    background:var(--rust);
+    flex-shrink:0;
+  }
+  .garland span:nth-child(3n+2){background:var(--gold);}
+  .garland span:nth-child(3n){background:var(--peach-chip); border:1px solid var(--gold);}
+  .garland::before, .garland::after{
+    content:""; flex:1; height:1px; background:linear-gradient(90deg, transparent, var(--gold-light));
+  }
+  .garland::after{background:linear-gradient(90deg, var(--gold-light), transparent);}
+
+  /* ===== Products section ===== */
+  .products-section{max-width:1120px; margin:0 auto; padding:40px 20px 80px;}
+  .section-head{text-align:center; margin-bottom:34px;}
+  .section-head .eyebrow{
+    color:var(--rust); font-weight:700; font-size:0.78rem; letter-spacing:.12em; text-transform:uppercase;
+  }
+  .section-head h2{font-size:1.9rem; margin:6px 0 8px; color:var(--ink);}
+  .section-head p{color:var(--ink-soft); font-size:0.98rem; margin:0;}
+
+  .product-grid{
+    display:grid; grid-template-columns:repeat(auto-fill, minmax(250px,1fr)); gap:24px;
+  }
+  .product-card{
+    background:var(--card); border-radius:var(--radius); overflow:hidden;
+    box-shadow:var(--shadow); border:1px solid var(--gold-light);
+    display:flex; flex-direction:column; cursor:pointer;
+    transition:transform .18s ease, box-shadow .18s ease;
+    position:relative;
+  }
+  .product-card:hover{transform:translateY(-4px); box-shadow:0 16px 34px -14px rgba(90,53,10,0.35);}
+  .product-card:focus-visible{outline:3px solid var(--rust); outline-offset:2px;}
+
+  /* scalloped temple-arch top edge, the signature motif */
+  .card-media{
+    position:relative; aspect-ratio:1/1; background:var(--cream-deep);
+    overflow:hidden;
+  }
+  .card-media img{width:100%;height:100%;object-fit:cover;}
+  .card-media::after{
+    content:""; position:absolute; left:0; right:0; bottom:-1px; height:14px;
+    background-image: radial-gradient(circle at 10px 0, transparent 9px, var(--card) 10px);
+    background-size:20px 14px; background-repeat:repeat-x;
+  }
+  .stock-tag{
+    position:absolute; top:10px; left:10px; background:rgba(37,26,14,0.78); color:#fff;
+    font-size:0.68rem; font-weight:700; padding:4px 10px; border-radius:999px; letter-spacing:.03em;
+  }
+
+  .card-body{padding:18px 18px 20px; display:flex; flex-direction:column; gap:8px; flex:1;}
+  .card-body h3{margin:0; font-size:1.08rem; line-height:1.3; color:var(--ink);}
+  .card-body .desc{font-size:0.85rem; color:var(--ink-soft); line-height:1.5; margin:0; flex:1;}
+  .price-row{display:flex; align-items:baseline; gap:8px; margin-top:2px;}
+  .price{font-weight:700; font-size:1.15rem; color:var(--rust-deep);}
+  .price-note{font-size:0.76rem; color:var(--ink-soft);}
+
+  .card-actions{display:flex; gap:8px; margin-top:10px;}
+  .view-btn{
+    flex:1; background:var(--peach-chip); color:var(--rust-deep); border:none;
+    padding:11px 10px; border-radius:10px; font-weight:700; font-size:0.83rem;
+  }
+  .buy-btn{
+    flex:1; background:linear-gradient(180deg,#2FCB59,var(--green-deep)); color:#fff; border:none;
+    padding:11px 10px; border-radius:10px; font-weight:700; font-size:0.83rem;
+    display:flex; align-items:center; justify-content:center; gap:6px; text-decoration:none;
+  }
+  .buy-btn svg{width:14px;height:14px;}
+
+  /* ===== Modal ===== */
+  .modal-backdrop{
+    position:fixed; inset:0; background:rgba(37,26,14,0.55); backdrop-filter:blur(2px);
+    display:none; align-items:flex-start; justify-content:center; z-index:100;
+    padding:26px 16px; overflow-y:auto;
+  }
+  .modal-backdrop.open{display:flex;}
+  .modal{
+    background:var(--card); border-radius:22px; max-width:760px; width:100%;
+    box-shadow:0 30px 60px -20px rgba(0,0,0,0.45); position:relative; overflow:hidden;
+    animation:pop .22s ease;
+  }
+  @keyframes pop{from{opacity:0; transform:translateY(14px) scale(.98);} to{opacity:1; transform:none;}}
+  .modal-close{
+    position:absolute; top:14px; right:14px; z-index:5;
+    width:36px;height:36px;border-radius:50%; background:rgba(37,26,14,0.75); color:#fff; border:none;
+    font-size:1.2rem; display:flex; align-items:center; justify-content:center;
+  }
+  .modal-grid{display:grid; grid-template-columns:1fr; }
+  @media(min-width:620px){ .modal-grid{grid-template-columns:1.1fr 1fr;} }
+
+  .gallery-main{aspect-ratio:1/1; background:var(--cream-deep); overflow:hidden;}
+  .gallery-main img{width:100%;height:100%;object-fit:cover;}
+  .thumbs{display:flex; gap:8px; padding:12px 16px; overflow-x:auto;}
+  .thumb{
+    width:58px;height:58px;border-radius:10px;overflow:hidden;flex-shrink:0;
+    border:2px solid transparent; background:var(--cream-deep); padding:0;
+  }
+  .thumb.active{border-color:var(--rust);}
+  .thumb img{width:100%;height:100%;object-fit:cover;}
+
+  .modal-details{padding:22px 24px 26px; display:flex; flex-direction:column;}
+  .modal-details .eyebrow-sm{color:var(--rust); font-weight:700; font-size:0.72rem; letter-spacing:.08em; text-transform:uppercase; margin-bottom:6px;}
+  .modal-details h3{margin:0 0 8px; font-size:1.35rem; color:var(--ink);}
+  .modal-details .desc-long{font-size:0.92rem; color:var(--ink-soft); line-height:1.65; margin:0 0 16px;}
+  .modal-details .price{font-size:1.5rem; margin-bottom:16px;}
+  .modal-badges{display:flex; gap:8px; flex-wrap:wrap; margin-bottom:20px;}
+  .modal-badges span{
+    font-size:0.72rem; font-weight:700; background:var(--peach-chip); color:var(--rust-deep);
+    padding:5px 10px; border-radius:999px;
+  }
+  .modal-actions{display:flex; flex-direction:column; gap:10px; margin-top:auto;}
+
+  /* ===== Footer ===== */
+  footer{
+    background:var(--ink); color:#EFE1CB; text-align:center; padding:34px 20px 90px;
+    font-size:0.85rem;
+  }
+  footer .fbrand{font-family:'Baloo 2',sans-serif; font-weight:700; font-size:1.1rem; color:#fff; margin-bottom:6px;}
+  footer .fnote{opacity:0.65; margin-top:6px;}
+
+  /* ===== Sticky mobile bottom bar ===== */
+  .sticky-bar{
+    position:fixed; left:0; right:0; bottom:0; z-index:50;
+    display:flex; gap:10px; padding:10px 14px; background:var(--card);
+    border-top:1px solid var(--gold-light); box-shadow:0 -6px 18px rgba(0,0,0,0.08);
+  }
+  .sticky-bar a{
+    flex:1; display:flex; align-items:center; justify-content:center; gap:8px;
+    padding:13px 10px; border-radius:12px; font-weight:700; font-size:0.92rem; text-decoration:none; color:#fff;
+  }
+  .sticky-bar .s-call{background:linear-gradient(180deg, var(--rust), var(--rust-deep));}
+  .sticky-bar .s-wa{background:linear-gradient(180deg,#2FCB59,var(--green-deep));}
+  .sticky-bar svg{width:17px;height:17px;}
+  body{padding-bottom:74px;}
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="header-inner">
+    <div class="brand">
+      <div class="brand-mark">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><path d="M12 2v6M9 5h6M6 21c0-4.5 2.5-6 6-6s6 1.5 6 6" stroke-linecap="round"/><circle cx="12" cy="12" r="2.4" fill="#fff" stroke="none"/></svg>
+      </div>
+      <div>
+        <div class="brand-name">Pavitra Narmadeshwar</div>
+        <div class="brand-sub">Shivling Center</div>
+      </div>
+    </div>
+    <a class="call-btn" href="tel:+918461096343">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      Call Us
+    </a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="om-watermark hindi">ॐ</div>
+  <span class="badge-pill">100% ORIGINAL SWAYAMBHU STONE</span>
+  <h1 class="hindi">घर लाएं साक्षात् महादेव!</h1>
+  <div class="en-headline">Bring Home Sacred Energy</div>
+  <p class="lede hindi">नर्मदा नदी के पवित्र तल से निकले असली नर्मदेश्वर शिवलिंग। Choose your exact divine stone via Live Video Call before order dispatch!</p>
+  <div class="heritage-row">
+    <div class="heritage-chip">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.4 6.9L21 9.3l-5.5 4.3L17.4 21 12 17l-5.4 4 1.9-7.4L3 9.3l6.6-.4z"/></svg>
+      हम प्राचीन काल से नर्मदेश्वर शिवलिंग बना रहे हैं — 50+ Years Legacy
+    </div>
+    <div class="heritage-chip">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      Trusted by 12,000+ Bhakta Parivars
+    </div>
+  </div>
+  <div class="hero-ctas">
+    <a class="cta-btn cta-whatsapp" href="https://wa.me/918461096343?text=%E0%A4%A8%E0%A4%AE%E0%A4%B8%E0%A5%8D%E0%A4%A4%E0%A5%87%20%F0%9F%99%8F%2C%20%E0%A4%AE%E0%A5%81%E0%A4%9D%E0%A5%87%20%E0%A4%85%E0%A4%B8%E0%A4%B2%E0%A5%80%20%E0%A4%A8%E0%A4%B0%E0%A5%8D%E0%A4%AE%E0%A4%A6%E0%A5%87%E0%A4%B6%E0%A5%8D%E0%A4%B5%E0%A4%B0%20%E0%A4%B6%E0%A4%BF%E0%A4%B5%E0%A4%B2%E0%A4%BF%E0%A4%82%E0%A4%97%20%E0%A4%AA%E0%A4%B8%E0%A4%82%E0%A4%A6%20%E0%A4%95%E0%A4%B0%E0%A4%A8%E0%A5%87%20%E0%A4%95%E0%A5%87%20%E0%A4%B2%E0%A4%BF%E0%A4%8F%20%E0%A4%B5%E0%A5%80%E0%A4%A1%E0%A4%BF%E0%A4%AF%E0%A5%8B%20%E0%A4%95%E0%A5%89%E0%A4%B2%20%E0%A4%95%E0%A4%B0%E0%A4%A8%E0%A4%BE%20%E0%A4%9A%E0%A4%BE%E0%A4%B9%E0%A4%A4%E0%A4%BE%2F%E0%A4%9A%E0%A4%BE%E0%A4%B9%E0%A4%A4%E0%A5%80%20%E0%A4%B9%E0%A5%82%E0%A4%81%E0%A5%A4" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="#fff"><path d="M17.6 6.32A8.86 8.86 0 0 0 12 4.05a8.94 8.94 0 0 0-7.75 13.4L3 21l3.65-1.2a8.93 8.93 0 0 0 5.35 1.77 8.94 8.94 0 0 0 5.6-15.25zM12 20.13a7.4 7.4 0 0 1-3.78-1.04l-.27-.16-2.8.92.9-2.73-.18-.28A7.42 7.42 0 1 1 19.4 12a7.4 7.4 0 0 1-7.4 8.13zm4.08-5.56c-.22-.11-1.3-.64-1.5-.72s-.35-.11-.5.11-.58.72-.7.87-.26.16-.48.05a6.06 6.06 0 0 1-1.79-1.1 6.7 6.7 0 0 1-1.24-1.54c-.13-.22 0-.34.1-.45s.22-.26.33-.38a1.5 1.5 0 0 0 .22-.37.4.4 0 0 0 0-.38c-.05-.11-.5-1.2-.68-1.64s-.36-.38-.5-.38h-.43a.82.82 0 0 0-.6.28 2.5 2.5 0 0 0-.78 1.86A4.36 4.36 0 0 0 8.1 10.7a10 10 0 0 0 3.82 3.37c.53.23.95.37 1.27.47a3 3 0 0 0 1.4.09 2.3 2.3 0 0 0 1.5-1.06 1.87 1.87 0 0 0 .13-1.06c-.06-.09-.2-.15-.42-.26z"/></svg>
+      WhatsApp पर पसंद करें
+    </a>
+    <a class="cta-btn cta-call" href="tel:+918461096343">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      अभी कॉल करें (Direct Call)
+    </a>
+  </div>
+  <div class="trust-row">
+    <div class="trust-chip"><span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>100% Original Guaranteed</div>
+    <div class="trust-chip"><span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>Safe Transit Delivery</div>
+  </div>
+</section>
+
+<div class="garland" id="garland"></div>
+
+<section class="products-section">
+  <div class="section-head">
+    <div class="eyebrow">पवित्र संग्रह</div>
+    <h2>Our Sacred Collection</h2>
+    <p>हर शिवलिंग हाथ से चयनित और वीडियो कॉल पर दिखाया जाता है — Every stone hand-selected & shown live before dispatch.</p>
+  </div>
+  <div class="product-grid" id="productGrid"></div>
+</section>
+
+<footer>
+  <div class="fbrand">🕉️ Pavitra Narmadeshwar Shivling Center</div>
+  <div>Narmada Tal, Original Swayambhu Stones — Delivered with Devotion</div>
+  <div class="fnote">pavitranarmadeshwarshivling.in · For custom size/weight requests, message us on WhatsApp</div>
+</footer>
+
+<div class="sticky-bar">
+  <a class="s-call" href="tel:+918461096343">
+    <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    कॉल करें
+  </a>
+  <a class="s-wa" target="_blank" rel="noopener" href="https://wa.me/918461096343?text=%E0%A4%A8%E0%A4%AE%E0%A4%B8%E0%A5%8D%E0%A4%A4%E0%A5%87%20%F0%9F%99%8F%2C%20%E0%A4%AE%E0%A5%81%E0%A4%9D%E0%A5%87%20%E0%A4%B6%E0%A4%BF%E0%A4%B5%E0%A4%B2%E0%A4%BF%E0%A4%82%E0%A4%97%20%E0%A4%95%E0%A5%87%20%E0%A4%AC%E0%A4%BE%E0%A4%B0%E0%A5%87%20%E0%A4%AE%E0%A5%87%E0%A4%82%20%E0%A4%9C%E0%A4%BE%E0%A4%A8%E0%A4%95%E0%A4%BE%E0%A4%B0%E0%A5%80%20%E0%A4%9A%E0%A4%BE%E0%A4%B9%E0%A4%BF%E0%A4%8F%E0%A5%A4">
+    <svg viewBox="0 0 24 24" fill="#fff"><path d="M17.6 6.32A8.86 8.86 0 0 0 12 4.05a8.94 8.94 0 0 0-7.75 13.4L3 21l3.65-1.2a8.93 8.93 0 0 0 5.35 1.77 8.94 8.94 0 0 0 5.6-15.25zM12 20.13a7.4 7.4 0 0 1-3.78-1.04l-.27-.16-2.8.92.9-2.73-.18-.28A7.42 7.42 0 1 1 19.4 12a7.4 7.4 0 0 1-7.4 8.13zm4.08-5.56c-.22-.11-1.3-.64-1.5-.72s-.35-.11-.5.11-.58.72-.7.87-.26.16-.48.05a6.06 6.06 0 0 1-1.79-1.1 6.7 6.7 0 0 1-1.24-1.54c-.13-.22 0-.34.1-.45s.22-.26.33-.38a1.5 1.5 0 0 0 .22-.37.4.4 0 0 0 0-.38c-.05-.11-.5-1.2-.68-1.64s-.36-.38-.5-.38h-.43a.82.82 0 0 0-.6.28 2.5 2.5 0 0 0-.78 1.86A4.36 4.36 0 0 0 8.1 10.7a10 10 0 0 0 3.82 3.37c.53.23.95.37 1.27.47a3 3 0 0 0 1.4.09 2.3 2.3 0 0 0 1.5-1.06 1.87 1.87 0 0 0 .13-1.06c-.06-.09-.2-.15-.42-.26z"/></svg>
+    व्हाट्सएप
+  </a>
+</div>
+
+<div class="modal-backdrop" id="modalBackdrop">
+  <div class="modal" id="modalContent"></div>
+</div>
+
+<script>
+const WA_NUMBER = "918461096343";
+const SITE_URL = "https://pavitranarmadeshwarshivling.in";
+
+function placeholderImg(label, tone){
+  const bg = tone || "#F2E3C7";
+  const svg = `<svg xmlns='http://www.w3.org/2000/svg' width='600' height='600'>
+    <rect width='600' height='600' fill='${bg}'/>
+    <circle cx='300' cy='250' r='90' fill='none' stroke='#C79A3E' stroke-width='4' opacity='0.55'/>
+    <path d='M300 190 v130 M255 220 h90' stroke='#C79A3E' stroke-width='6' stroke-linecap='round' opacity='0.55'/>
+    <text x='300' y='400' font-family='Arial' font-size='24' fill='#8a6a3a' text-anchor='middle' font-weight='bold'>${label}</text>
+    <text x='300' y='432' font-family='Arial' font-size='16' fill='#a5875c' text-anchor='middle'>More photos added soon</text>
+  </svg>`;
+  return "data:image/svg+xml;utf8," + encodeURIComponent(svg);
+}
+
+const products = [
+  {
+    id: "pooja-kit-fullset",
+    name: "Narmadeshwar Shivling Complete Pooja Kit (Fullset)",
+    tag: "Bestseller",
+    price: "₹1,499",
+    priceNote: "incl. full accessories",
+    shortDesc: "Everything you need for daily puja — Shivling with jaladhari, panchpatra, bell, diya & more in one sacred set.",
+    longDesc: "A complete, ready-to-worship set featuring an authentic Narmadeshwar Shivling on a jaladhari base, bundled with essential puja accessories. Ideal for home mandirs and daily abhishekam. Every stone is shown to you on a live video call before packing and dispatch.",
+    images: [
+      "https://res.cloudinary.com/tdqmhzyk/image/upload/v1786851980/IMG_E1047_ftw9gh.jpg"
+    ],
+    badges: ["100% Original", "Video Call Selection", "Safe Packaging"]
+  },
+  {
+    id: "shivling-pendant",
+    name: "Narmadeshwar Shivling Pendant",
+    tag: "Everyday Wear",
+    price: "Price on Call",
+    priceNote: "size & chain options available",
+    shortDesc: "A small sacred Narmadeshwar stone pendant to carry Mahadev's energy with you, wherever you go.",
+    longDesc: "Hand-selected miniature Narmadeshwar stone set as a pendant, worn for daily protection and devotion. Available in a few sizes — message us on WhatsApp for the size and chain options currently in stock.",
+    images: [
+      "https://res.cloudinary.com/tdqmhzyk/image/upload/v1786853607/IMG20260731202028_ohmvp5.jpg"
+    ],
+    badges: ["100% Original", "Compact & Portable"]
+  },
+  {
+    id: "shivling-1-5in-jaladhari-3in",
+    name: "Narmadeshwar Shivling 1.5 Inch with 3 Inch Jaladhari",
+    tag: "Popular Size",
+    price: "₹599",
+    priceNote: "Shivling 1.5in + Jaladhari 3in",
+    shortDesc: "A compact, well-proportioned Shivling and jaladhari set — perfect for home altars with limited space.",
+    longDesc: "This 1.5 inch Narmadeshwar Shivling sits on a matching 3 inch jaladhari base, giving a balanced, temple-like look for compact home mandirs. Genuine Narmada river stone, shown live on video call before your order ships.",
+    images: [
+      "https://res.cloudinary.com/tdqmhzyk/image/upload/v1786851505/file_00000000ba8c8208a26f128cab088ee1_yamt6g.png"
+    ],
+    badges: ["100% Original", "Compact Size", "₹599 Fixed Price"]
+  },
+  {
+    id: "shivling-2in-jaladhari-4in",
+    name: "Narmadeshwar Shivling 2 Inch with 4 Inch Jaladhari",
+    tag: "Medium Size",
+    price: "₹999",
+    priceNote: "approx. — confirm on call",
+    shortDesc: "A slightly larger Shivling & jaladhari pair, well suited for a dedicated puja corner or mandir shelf.",
+    longDesc: "A 2 inch Shivling paired with a 4 inch jaladhari base for a fuller, more prominent presence on your altar. Like all our stones, this is shown to you over a live video call so you can pick your exact piece before dispatch.",
+    images: [
+      placeholderImg("Product Photo")
+    ],
+    badges: ["100% Original", "Video Call Selection"]
+  },
+  {
+    id: "rudraksha-shivling-combo",
+    name: "Rudraksha Mala + Narmadeshwar Shivling Combo",
+    tag: "Combo Offer",
+    price: "Price on Call",
+    priceNote: "bundle pricing on WhatsApp",
+    shortDesc: "A devotional combo pairing an authentic Rudraksha mala with a small Narmadeshwar Shivling.",
+    longDesc: "A thoughtfully paired combo for daily sadhana — an authentic Rudraksha mala alongside a small Narmadeshwar Shivling. A meaningful gift for pooja beginners or as a festival gift. Message us for current bundle pricing and stock.",
+    images: [
+      placeholderImg("Product Photo")
+    ],
+    badges: ["Combo Deal", "Great as a Gift"]
+  },
+  {
+    id: "marble-jaladhari-base-set",
+    name: "Premium Marble Jaladhari Base Set",
+    tag: "Premium",
+    price: "Price on Call",
+    priceNote: "custom sizes available",
+    shortDesc: "A finely finished marble jaladhari base to elevate your existing Shivling with a temple-grade look.",
+    longDesc: "Upgrade your current Shivling's presentation with a premium marble jaladhari base, finished for a smooth, temple-grade appearance. Custom sizes can be made to match your Shivling — share your stone's size on WhatsApp for a quote.",
+    images: [
+      placeholderImg("Product Photo")
+    ],
+    badges: ["Premium Finish", "Custom Sizing"]
+  }
+];
+
+function waLink(product){
+  const msg = `नमस्ते 🙏, मुझे यह प्रोडक्ट चाहिए / I want to order:\n${product.name}\nLink: ${SITE_URL}/#${product.id}`;
+  return `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`;
+}
+
+const grid = document.getElementById("productGrid");
+
+products.forEach(p => {
+  const card = document.createElement("div");
+  card.className = "product-card";
+  card.tabIndex = 0;
+  card.setAttribute("role","button");
+  card.setAttribute("aria-label", "View details for " + p.name);
+  card.innerHTML = `
+    <div class="card-media">
+      <span class="stock-tag">${p.tag}</span>
+      <img src="${p.images[0]}" alt="${p.name}" loading="lazy">
+    </div>
+    <div class="card-body">
+      <h3>${p.name}</h3>
+      <p class="desc">${p.shortDesc}</p>
+      <div class="price-row">
+        <span class="price">${p.price}</span>
+        <span class="price-note">${p.priceNote}</span>
+      </div>
+      <div class="card-actions">
+        <button class="view-btn" data-view="${p.id}">View Details</button>
+        <a class="buy-btn" href="${waLink(p)}" target="_blank" rel="noopener" onclick="event.stopPropagation()">
+          <svg viewBox="0 0 24 24" fill="#fff"><path d="M17.6 6.32A8.86 8.86 0 0 0 12 4.05a8.94 8.94 0 0 0-7.75 13.4L3 21l3.65-1.2a8.93 8.93 0 0 0 5.35 1.77 8.94 8.94 0 0 0 5.6-15.25zM12 20.13a7.4 7.4 0 0 1-3.78-1.04l-.27-.16-2.8.92.9-2.73-.18-.28A7.42 7.42 0 1 1 19.4 12a7.4 7.4 0 0 1-7.4 8.13z"/></svg>
+          Buy Now
+        </a>
+      </div>
+    </div>
+  `;
+  card.addEventListener("click", (e) => {
+    if(e.target.closest(".buy-btn")) return;
+    openModal(p.id);
+  });
+  card.addEventListener("keydown", (e) => {
+    if(e.key === "Enter" || e.key === " "){ openModal(p.id); }
+  });
+  grid.appendChild(card);
+});
+
+const backdrop = document.getElementById("modalBackdrop");
+const modalContent = document.getElementById("modalContent");
+
+function openModal(id){
+  const p = products.find(x => x.id === id);
+  if(!p) return;
+
+  // Build a gallery: real image(s) + placeholders to reach at least 4 views
+  const gallery = [...p.images];
+  while(gallery.length < 4){
+    gallery.push(placeholderImg("More Views Coming"));
+  }
+
+  modalContent.innerHTML = `
+    <button class="modal-close" id="modalCloseBtn" aria-label="Close">&times;</button>
+    <div class="modal-grid">
+      <div>
+        <div class="gallery-main"><img id="mainGalleryImg" src="${gallery[0]}" alt="${p.name}"></div>
+        <div class="thumbs" id="thumbRow">
+          ${gallery.map((src,i)=>`<button class="thumb ${i===0?'active':''}" data-src="${src}"><img src="${src}" alt="${p.name} view ${i+1}"></button>`).join("")}
+        </div>
+      </div>
+      <div class="modal-details">
+        <div class="eyebrow-sm">${p.tag}</div>
+        <h3>${p.name}</h3>
+        <p class="desc-long">${p.longDesc}</p>
+        <div class="price">${p.price} <span class="price-note">${p.priceNote}</span></div>
+        <div class="modal-badges">${p.badges.map(b=>`<span>${b}</span>`).join("")}</div>
+        <div class="modal-actions">
+          <a class="cta-btn cta-whatsapp" href="${waLink(p)}" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="#fff"><path d="M17.6 6.32A8.86 8.86 0 0 0 12 4.05a8.94 8.94 0 0 0-7.75 13.4L3 21l3.65-1.2a8.93 8.93 0 0 0 5.35 1.77 8.94 8.94 0 0 0 5.6-15.25zM12 20.13a7.4 7.4 0 0 1-3.78-1.04l-.27-.16-2.8.92.9-2.73-.18-.28A7.42 7.42 0 1 1 19.4 12a7.4 7.4 0 0 1-7.4 8.13z"/></svg>
+            Buy Now on WhatsApp
+          </a>
+          <a class="cta-btn cta-call" href="tel:+918461096343">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Call Instead
+          </a>
+        </div>
+      </div>
+    </div>
+  `;
+
+  document.getElementById("modalCloseBtn").addEventListener("click", closeModal);
+  document.getElementById("thumbRow").addEventListener("click", (e) => {
+    const btn = e.target.closest(".thumb");
+    if(!btn) return;
+    document.getElementById("mainGalleryImg").src = btn.dataset.src;
+    document.querySelectorAll(".thumb").forEach(t=>t.classList.remove("active"));
+    btn.classList.add("active");
+  });
+
+  backdrop.classList.add("open");
+  document.body.style.overflow = "hidden";
+  history.replaceState(null, "", "#" + id);
+}
+
+function closeModal(){
+  backdrop.classList.remove("open");
+  document.body.style.overflow = "";
+  history.replaceState(null, "", location.pathname);
+}
+
+backdrop.addEventListener("click", (e) => {
+  if(e.target === backdrop) closeModal();
+});
+document.addEventListener("keydown", (e) => {
+  if(e.key === "Escape") closeModal();
+});
+
+// Marigold divider dots
+const garland = document.getElementById("garland");
+for(let i=0;i<26;i++){
+  const s = document.createElement("span");
+  garland.appendChild(s);
+}
+
+// Open modal directly if URL has a matching hash on load
+window.addEventListener("DOMContentLoaded", () => {
+  const hash = location.hash.replace("#","");
+  if(hash && products.find(p=>p.id===hash)) openModal(hash);
+});
+</script>
+
+</body>
+</html>
